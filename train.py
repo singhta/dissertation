@@ -40,7 +40,7 @@ if __name__ == '__main__':
     dataloaders = []
     for i in range(1, 10):
         dataloaders.append(DataLoader(dataset_loader.load_data(
-            nr_of_channels=3, batch_size=opt.batch_size, videosequence=i, generator=True, subfolder='vangogh2photo'),
+            nr_of_channels=3, batch_size=opt.batch_size, videosequence=i, generator=True, subfolder='monet2photo'),
             batch_size=opt.batch_size, shuffle=False, num_workers=1))
     for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):    # outer loop for different epochs; we save the model by <epoch_count>, <epoch_count>+<save_latest_freq>
         epoch_start_time = time.time()  # timer for entire epoch
